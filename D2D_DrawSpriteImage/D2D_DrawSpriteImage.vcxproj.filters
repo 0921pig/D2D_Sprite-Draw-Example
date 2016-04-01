@@ -16,15 +16,42 @@
     <Filter Include="소스 파일\DeviceMgr">
       <UniqueIdentifier>{59c1d6e0-faca-4882-9e60-3cefbcf74b3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\Base_Header">
+      <UniqueIdentifier>{e3577ad6-505f-44b5-8577-8338a400a506}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Execution">
+      <UniqueIdentifier>{1a33edee-b546-4b89-adef-0bf8d23dcf45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp">
       <Filter>소스 파일\DeviceMgr</Filter>
     </ClCompile>
+    <ClCompile Include="Execution.cpp">
+      <Filter>소스 파일\Execution</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DeviceMgr.h">
       <Filter>소스 파일\DeviceMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Base.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>헤더 파일\Base_Header</Filter>
+    </ClInclude>
+    <ClInclude Include="enum.h">
+      <Filter>헤더 파일\Base_Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Execution.h">
+      <Filter>소스 파일\Execution</Filter>
+    </ClInclude>
+    <ClInclude Include="constant.h">
+      <Filter>헤더 파일\Base_Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

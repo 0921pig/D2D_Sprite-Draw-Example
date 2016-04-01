@@ -149,10 +149,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="constant.h" />
     <ClInclude Include="DeviceMgr.h" />
+    <ClInclude Include="Execution.h" />
+    <ClInclude Include="macro.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="enum.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceMgr.cpp" />
+    <ClCompile Include="Execution.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
