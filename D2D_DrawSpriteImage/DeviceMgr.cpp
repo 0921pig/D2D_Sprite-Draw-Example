@@ -33,7 +33,33 @@ void CDeviceMgr::Render_End()
 
 void CDeviceMgr::Draw()
 {
-	
+	TEXINFO* pTexInfo = new TEXINFO;
+	ZeroMemory(pTexInfo, sizeof(TEXINFO));
+
+	if (FAILED(D3DXGetImageInfoFromFile(L"back_Lobby.png", &pTexInfo->ImgInfo)))
+		return;
+
+
+	if (FAILED(D3DXCreateTextureFromFileEx(GET_SINGLE(CDeviceMgr)->GetDevice()
+		, L"back_Lobby.png", pTexInfo->ImgInfo.Width
+		, pTexInfo->ImgInfo.Height, pTexInfo->ImgInfo.MipLevels
+		, 0, pTexInfo->ImgInfo.Format
+		, D3DPOOL_MANAGED, D3DX_DEFAULT, D3DX_DEFAULT
+		, D3DCOLOR_ARGB(255, 0, 0, 0)
+		, &pTexInfo->ImgInfo
+		, NULL, &pTexInfo->pTexture)))
+		return;
+
+	if (pTexInfo == NULL)
+		return;
+
+	D3DXMATRIX matTrans;
+	D3DXMatrixTranslation(&matTrans, 0.f, 0.f, 0.f);
+
+	GET_SINGLE(CDeviceMgr)->GetSprite()->SetTransform(&matTrans);
+	GET_SINGLE(CDeviceMgr)->GetSprite()->Draw(pTexInfo->pTexture, NULL, NULL, NULL, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+	return;
 }
 
 
